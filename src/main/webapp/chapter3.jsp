@@ -12,6 +12,13 @@
 
 <ul>
 <li><a href="chapter3">GET</a></li>
+<li>
+	<form method="post" action="chapter3">
+		<input type="text" name="input" />
+		<input type="submit" value="POST"/>
+	</form>
+</li>
+<li>HEAD ~$ curl -I localhost:8080/ocejwcd/chapter3</li>
 </ul>
 
 </body>

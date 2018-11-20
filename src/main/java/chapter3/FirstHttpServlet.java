@@ -1,6 +1,7 @@
 package chapter3;
 
 import java.io.IOException;
+import java.io.Writer;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,8 +14,14 @@ public class FirstHttpServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.getWriter().append("First HTTP Servlet");
-		resp.getWriter().flush();
+		resp.getWriter().append(req.getMethod());
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		Writer writer = resp.getWriter();
+		writer.append(req.getMethod()+"\n");
+		writer.append("Data sent to server: "+req.getParameter("input"));
 	}
 
 }
