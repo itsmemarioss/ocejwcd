@@ -5,7 +5,7 @@
 <ul>
 <li><a href="chapter3.jsp">Chapter 3</a></li>
 <li><a href="chapter4">Chapter 4</a></li>
-<li><a href="#">Chapter 5</a></li>
+<li><a href="chapter5.jsp">Chapter 5</a></li>
 </ul>
 </body>
 </html>
