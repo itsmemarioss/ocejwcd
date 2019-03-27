@@ -4,4 +4,44 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <description>Small project created in order to apply new concepts.</description>
+  
+  <context-param>
+  	<param-name>admin_email</param-name>
+  	<param-value>admin@email.com</param-value>
+  </context-param>
+  
+  <session-config>
+  	<session-timeout>0</session-timeout>
+  </session-config>
+  
+  <!-- chapter 4 -->
+  <servlet>
+  	<servlet-name>UsingServletConfig</servlet-name>
+  	<servlet-class>chapter4.UsingServletConfig</servlet-class>
+  	<init-param>
+  		<param-name>param1</param-name>
+  		<param-value>value1</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UsingServletConfig</servlet-name>
+  	<url-pattern>/chapter4/servlet-config</url-pattern>
+  </servlet-mapping>
+  
+  <!-- chapter 7 - filters -->
+  <filter>
+  	<filter-name>MyFilter</filter-name>
+  	<filter-class>chapter7.MyFilter</filter-class>
+  	<init-param>
+  		<param-name>my_param</param-name>
+  		<param-value>Mario Santos Sousa</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+  	<url-pattern>/chapter7</url-pattern>
+  </filter-mapping>
 </web-app>
